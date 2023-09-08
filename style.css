@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    user-select: none;
+}
+
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 70px);
+    grid-template-rows: repeat(8, 70px);
+}
+
+.square {
+    width: 70px;
+    height: 70px;
+}
+
+.white {
+    background-color: #e9edcc;
+}
+
+.black {
+    background-color: #779954;
+}
+
+
+img {
+    width: 70px;
+    height: 70px;
+}
+
+.hilight {
+    background-color: aquamarine;
+}
