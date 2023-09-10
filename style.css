@@ -10,6 +10,7 @@ body {
     display: grid;
     grid-template-columns: repeat(8, 70px);
     grid-template-rows: repeat(8, 70px);
+    border: 10px solid rgb(171, 238, 162);
 }
 
 .square {
