@@ -1,0 +1,53 @@
+.square {
+    width: 70px;
+    height: 70px;
+}
+
+.light {
+    background-color: white;
+}
+
+.dark {
+    background-color: rgb(61, 131, 61);
+}
+
+#chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 70px);
+    grid-template-rows: repeat(8, 70px);
+    border-style: double;
+}
+
+img {
+    width: 70px;
+    height: 70px;
+}
+
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    user-select: none;
+    background-size: cover;
+    background-image: url('images/nebula_cloud.jpg');
+}
+
+
+.hilight {
+    background-color: yellow;
+}
+
+.checkhilight {
+    background-color: rgb(216, 83, 83);
+}
+
+
+/*I will do it later*/
+.promotion_box {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(1, 80px);
+    border-style: double;
+}
