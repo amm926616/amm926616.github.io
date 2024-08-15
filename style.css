@@ -28,10 +28,9 @@ body {
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: gray;
+    background-color: black;
     user-select: none;
     background-size: cover;
-    background-image: url('images/194506.jpg');
 }
 
 
