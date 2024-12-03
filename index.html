@@ -4,7 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>AMM's Portfolio</title>
-        <link rel="stylesheet" href="./src/styles/style.css">
+        <link rel="stylesheet" href="./src/styles/style.css" />
+        <script src="script.js" defer></script>
     </head>
     <body>
         <header>
@@ -13,139 +14,113 @@
 
         <nav>
             <div>
-                <a href="#">Home</a>
-                <a href="about.html">About Me</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
+                <a href="#home">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </div>
-            <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                Toggle Theme
+            </button>
         </nav>
 
-        <div class="container">
-            <h2>My Personal Projects</h2>
+        <!-- Home Section -->
+        <section id="home" class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p>
+                This portfolio showcases my projects, skills, and contact
+                information.
+            </p>
+        </section>
 
-            <!-- Example Project -->
+        <!-- About Section -->
+        <section id="about" class="container">
+            <h2>About Me - Aung Myint Myat</h2>
+            <!-- <img
+                src="./src/images/profile.jpg"
+                alt="Aung Myint Myat"
+                class="profile-image"
+            /> -->
+            <p>
+                I am from Myanmar, currently attending a computer science course
+                at UoPeople...
+            </p>
+
+            <h3>Skills & Technologies</h3>
+            <ul>
+                <li>Programming Languages: Python, Java, JavaScript, Bash</li>
+                <li>GUI Development: Tkinter, PyQt6</li>
+                <li>Web Development: HTML, CSS, JavaScript</li>
+                <li>
+                    Languages: English (Advanced), Burmese (Native), Korean
+                    (Beginner)
+                </li>
+            </ul>
+
+            <h3>Personality & Interests</h3>
+            <p>I resonate strongly with the INTP personality...</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="container">
+            <h2>My Personal Projects</h2>
             <div class="project">
                 <h3>April Music Player in PyQt6</h3>
                 <p>
-                    Frustrated by the lack of interactive lyrics support in desktop music players, I created April Music Player to bridge the gap between music enjoyment and language learning. While preparing for the EPS exam and learning Korean, I realized the importance of integrating learning into daily life.  
+                    Frustrated by the lack of interactive lyrics support in
+                    desktop music players...
                 </p>
-                <p>
-                    April Music Player offers features like LRC syncing, interactive lyrics, note-taking for each lyric, and a personal dictionary for vocabulary collection. Additionally, it includes tools like Zotify, YT-DLP, SpotDL for music downloads, and Syrics, LrcDL for lyrics downloads — all for free!
-                </p>
-                <p>
-                    April Music Player is not just a music player; it’s a companion for both music lovers and language learners. Isn’t it the best way to enjoy music and learn a language at the same time?
-                </p>
-                                <img
-                    src="img/april1.png"
-                    alt="April Music Player screenshot"
-                />
+                <img src="img/april1.png" alt="April Music Player screenshot" />
                 <a
                     href="https://github.com/amm926616/april-music-player"
                     target="_blank"
                     >More About April Music Player</a
                 >
             </div>
+        </section>
 
-            <!-- Add more projects here -->
-        </div>
-
-        <div class="container">
-            <h2>My Personal Projects</h2>
-
-            <!-- Example Project -->
-            <div class="project">
-                <h3>April Music Player in PyQt6</h3>
-                <p>
-                    Frustrated by the lack of interactive lyrics support in desktop music players, I created April Music Player to bridge the gap between music enjoyment and language learning. While preparing for the EPS exam and learning Korean, I realized the importance of integrating learning into daily life.  
-                </p>
-                <p>
-                    April Music Player offers features like LRC syncing, interactive lyrics, note-taking for each lyric, and a personal dictionary for vocabulary collection. Additionally, it includes tools like Zotify, YT-DLP, SpotDL for music downloads, and Syrics, LrcDL for lyrics downloads — all for free!
-                </p>
-                <p>
-                    April Music Player is not just a music player; it’s a companion for both music lovers and language learners. Isn’t it the best way to enjoy music and learn a language at the same time?
-                </p>
-                                <img
-                    src="img/april1.png"
-                    alt="April Music Player screenshot"
-                />
-                <a
-                    href="https://github.com/amm926616/april-music-player"
-                    target="_blank"
-                    >More About April Music Player</a
-                >
+        <!-- Contact Section -->
+        <section id="contact" class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to contact me via any of the following platforms:</p>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <a
+                        href="https://www.facebook.com/yourusername"
+                        target="_blank"
+                        class="contact-icon"
+                    >
+                        <img src="./icons/facebook.png" alt="Facebook" />
+                    </a>
+                    <p>Facebook / Messenger</p>
+                </div>
+                <div class="contact-method">
+                    <a
+                        href="https://t.me/yourusername"
+                        target="_blank"
+                        class="contact-icon"
+                    >
+                        <img src="./icons/telegram.png" alt="Telegram" />
+                    </a>
+                    <p>Telegram</p>
+                </div>
+                <div class="contact-method">
+                    <a href="mailto:your-email@gmail.com" class="contact-icon">
+                        <img src="./icons/gmail.png" alt="Gmail" />
+                    </a>
+                    <p>Gmail</p>
+                </div>
             </div>
+        </section>
 
-            <!-- Add more projects here -->
-        </div>
-
-        <div class="container">
-            <h2>My Personal Projects</h2>
-
-            <!-- Example Project -->
-            <div class="project">
-                <h3>April Music Player in PyQt6</h3>
-                <p>
-                    Frustrated by the lack of interactive lyrics support in desktop music players, I created April Music Player to bridge the gap between music enjoyment and language learning. While preparing for the EPS exam and learning Korean, I realized the importance of integrating learning into daily life.  
-                </p>
-                <p>
-                    April Music Player offers features like LRC syncing, interactive lyrics, note-taking for each lyric, and a personal dictionary for vocabulary collection. Additionally, it includes tools like Zotify, YT-DLP, SpotDL for music downloads, and Syrics, LrcDL for lyrics downloads — all for free!
-                </p>
-                <p>
-                    April Music Player is not just a music player; it’s a companion for both music lovers and language learners. Isn’t it the best way to enjoy music and learn a language at the same time?
-                </p>
-                                <img
-                    src="img/april1.png"
-                    alt="April Music Player screenshot"
-                />
-                <a
-                    href="https://github.com/amm926616/april-music-player"
-                    target="_blank"
-                    >More About April Music Player</a
-                >
-            </div>
-
-            <!-- Add more projects here -->
-        </div>
-
-        <div class="container">
-            <h2>My Personal Projects</h2>
-
-            <!-- Example Project -->
-            <div class="project">
-                <h3>April Music Player in PyQt6</h3>
-                <p>
-                    Frustrated by the lack of interactive lyrics support in desktop music players, I created April Music Player to bridge the gap between music enjoyment and language learning. While preparing for the EPS exam and learning Korean, I realized the importance of integrating learning into daily life.  
-                </p>
-                <p>
-                    April Music Player offers features like LRC syncing, interactive lyrics, note-taking for each lyric, and a personal dictionary for vocabulary collection. Additionally, it includes tools like Zotify, YT-DLP, SpotDL for music downloads, and Syrics, LrcDL for lyrics downloads — all for free!
-                </p>
-                <p>
-                    April Music Player is not just a music player; it’s a companion for both music lovers and language learners. Isn’t it the best way to enjoy music and learn a language at the same time?
-                </p>
-                                <img
-                    src="img/april1.png"
-                    alt="April Music Player screenshot"
-                />
-                <a
-                    href="https://github.com/amm926616/april-music-player"
-                    target="_blank"
-                    >More About April Music Player</a
-                >
-            </div>
-
-            <!-- Add more projects here -->
-        </div>
+        <footer>
+            <p>&copy; 2024 Aung Myint Myat</p>
+        </footer>
 
         <script>
             function toggleTheme() {
-                document.body.classList.toggle('dark-mode');
+                document.body.classList.toggle("dark-mode");
             }
         </script>
-
-        <footer>
-            <p>&copy; AMM's Personal Projects</p>
-        </footer>
-
     </body>
 </html>
