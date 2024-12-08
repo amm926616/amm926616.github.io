@@ -3,18 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Aung Myint Myat's Portfolio showcasing projects, skills, and contact information."
-        />
-        <meta
-            name="keywords"
-            content="Portfolio, Aung Myint Myat, Projects, Contact, Skills"
-        />
+        <meta name="description" content="Aung Myint Myat's Portfolio showcasing projects, skills, and contact information." />
+        <meta name="keywords" content="Portfolio, Aung Myint Myat, Projects, Contact, Skills" />
         <meta name="author" content="Aung Myint Myat" />
         <title>AMM's Portfolio</title>
         <link rel="stylesheet" href="./resources/styles/style.css" />
-        <script src="script.js" defer></script>
+        <script src="./resources/scripts/script.js" defer></script>
     </head>
     <body>
         <!-- Header Section -->
@@ -30,132 +24,114 @@
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </div>
-            <button class="theme-toggle" onclick="toggleTheme()">
+            <button class="theme-toggle" id="theme-toggle">
                 Toggle Theme
             </button>
         </nav>
 
-        <!-- Home Section -->
-        <section id="home" class="container" aria-labelledby="home-heading">
-            <h2 id="home-heading">Welcome to My Portfolio</h2>
-            <p>
-                <b
-                    >This is the home section of your portfolio. Write about the
-                    brief introduction of your portfolio. Pardon my terrible web
-                    design. I prefer backend logic coding. So, ui is not my
-                    thing.</b
-                >
-            </p>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="container" aria-labelledby="about-heading">
-            <h2 id="about-heading">About Me - Aung Myint Myat</h2>
-            <p>
-                I am from Myanmar, currently attending a computer science course
-                at UoPeople...
-            </p>
-            <h3>Skills & Technologies</h3>
-            <ul>
-                <li>Programming Languages: Python, Java, JavaScript, Bash</li>
-                <li>GUI Development: Tkinter, PyQt6</li>
-                <li>Web Development: HTML, CSS, JavaScript</li>
-                <li>
-                    Languages: English (Advanced), Burmese (Native), Korean
-                    (Beginner)
-                </li>
-            </ul>
-            <h3>Personality & Interests</h3>
-            <p>I resonate strongly with the INTP personality...</p>
-        </section>
-
-        <!-- Projects Section -->
-        <section
-            id="projects"
-            class="container"
-            aria-labelledby="projects-heading"
-        >
-            <h2 id="projects-heading">My Personal Projects</h2>
-            <article class="project">
-                <h3>April Music Player in PyQt6</h3>
+        <!-- Main Content Section -->
+        <main>
+            <!-- Home Section -->
+            <section id="home" class="container" aria-labelledby="home-heading">
+                <h2 id="home-heading">Welcome to My Portfolio</h2>
                 <p>
-                    Frustrated by the lack of interactive lyrics support in
-                    desktop music players, I created April Music Player to
-                    bridge the gap between music enjoyment and language
-                    learning. While preparing for the EPS exam and learning
-                    Korean, I realized the importance of integrating learning
-                    into daily life.
+                    <b>Your go-to place for exploring innovative projects and my journey as a developer.</b>
                 </p>
-                <p>
-                    April Music Player offers features like LRC syncing,
-                    interactive lyrics, note-taking for each lyric, and a
-                    personal dictionary for vocabulary collection. Additionally,
-                    it includes tools like Zotify, YT-DLP, SpotDL for music
-                    downloads, and Syrics, LrcDL for lyrics downloads — all for
-                    free!
-                </p>
-                <p>
-                    April Music Player is not just a music player; it’s a
-                    companion for both music lovers and language learners. Isn’t
-                    it the best way to enjoy music and learn a language at the
-                    same time?
-                </p>
-                <img src="img/april1.png" alt="April Music Player screenshot" />
-                <a
-                    href="https://github.com/amm926616/april-music-player"
-                    target="_blank"
-                    >More About April Music Player</a
-                >
-            </article>
-        </section>
+            </section>
 
-        <!-- Contact Section -->
-        <section
-            id="contact"
-            class="container"
-            aria-labelledby="contact-heading"
-        >
-            <h2 id="contact-heading">Contact Me</h2>
-            <p>Feel free to contact me via any of the following platforms:</p>
-            <div class="contact-methods">
-                <div class="contact-method">
-                    <a
-                        href="https://www.facebook.com/yourusername"
-                        target="_blank"
-                        class="contact-icon"
-                    >
-                        <img src="./icons/facebook.png" alt="Facebook" />
-                    </a>
-                    <p>Facebook / Messenger</p>
+            <!-- About Section -->
+            <section id="about" class="container" aria-labelledby="about-heading">
+                <img src="./resources/profiles/profile.jpg" alt="Profile Picture of Aung Myint Myat" class="profile-image" />
+                <h2 id="about-heading">About Me - Aung Myint Myat</h2>
+                <p>
+                    I am from Myanmar, currently attending a computer science course at UoPeople...
+                </p>
+                <h3>Skills & Technologies</h3>
+                <ul>
+                    <li>Programming Languages: Python, Java, JavaScript, Bash</li>
+                    <li>GUI Development: Tkinter, PyQt6</li>
+                    <li>Web Development: HTML, CSS, JavaScript</li>
+                    <li>Languages: English (Advanced), Burmese (Native), Korean (Beginner)</li>
+                </ul>
+                <h3>Personality & Interests</h3>
+                <p>I resonate strongly with the INTP personality...</p>
+                <a href="./resources/Aung_Myint_Myat_Resume.pdf" class="download-link">Download My Resume</a>
+            </section>
+            
+            <!-- Projects Section -->
+            <section id="projects">
+                <h2>My Personal Projects</h2>
+
+                <article id="april-music-player" class="project">
+                    <h3>April Music Player</h3>
+                    <p>
+                        April Music Player is not just a music player; it’s a companion for both music lovers and language learners.
+                    </p>
+                    <div id="april-music-player-gallery" class="screenshot-gallery"></div> <!-- Gallery populated dynamically -->
+                </article>
+
+                <article id="chess-project" class="project">
+                    <h3>Chess in HTML, CSS, and JavaScript</h3>
+                    <p>
+                        A fun and interactive chess game made with web technologies.
+                    </p>
+                    <div id="chess-project-gallery" class="screenshot-gallery"></div> <!-- Gallery populated dynamically -->
+                </article>
+
+                <article id="aespa-Live-My-Life-Film-Photos" class="project">
+                    <h3>Chess in HTML, CSS, and JavaScript</h3>
+                    <p>
+                        Aespa live my live
+                    </p>
+                    <div id="aespa-Live-My-Life-Film-Photos-gallery" class="screenshot-gallery"></div> <!-- Gallery populated dynamically -->
+                </article>
+
+                <!-- Add more projects here, each with its own gallery -->
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="container" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Contact Me</h2>
+                <form action="#" method="post" class="contact-form" aria-labelledby="contact-form-heading">
+                    <h3 id="contact-form-heading">Get in touch</h3>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required aria-describedby="name-description"/>
+                    <span id="name-description">Please enter your full name.</span>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required aria-describedby="email-description"/>
+                    <span id="email-description">We'll contact you via this email.</span>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required aria-describedby="message-description"></textarea>
+                    <span id="message-description">Write your message here.</span>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <a href="https://www.facebook.com/yourusername" target="_blank" class="contact-icon">
+                            <img src="./icons/facebook.png" alt="Facebook Messenger" />
+                        </a>
+                        <p>Messenger</p>
+                    </div>
+                    <div class="contact-method">
+                        <a href="https://t.me/yourusername" target="_blank" class="contact-icon">
+                            <img src="./icons/telegram.png" alt="Telegram" />
+                        </a>
+                        <p>Telegram</p>
+                    </div>
+                    <div class="contact-method">
+                        <a href="mailto:your-email@gmail.com" class="contact-icon">
+                            <img src="./icons/gmail.png" alt="Gmail" />
+                        </a>
+                        <p>Gmail</p>
+                    </div>
                 </div>
-                <div class="contact-method">
-                    <a
-                        href="https://t.me/yourusername"
-                        target="_blank"
-                        class="contact-icon"
-                    >
-                        <img src="./icons/telegram.png" alt="Telegram" />
-                    </a>
-                    <p>Telegram</p>
-                </div>
-                <div class="contact-method">
-                    <a href="mailto:your-email@gmail.com" class="contact-icon">
-                        <img src="./icons/gmail.png" alt="Gmail" />
-                    </a>
-                    <p>Gmail</p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
         <!-- Footer Section -->
         <footer>
             <p>&copy; 2024 Aung Myint Myat</p>
         </footer>
-
-        <script>
-            function toggleTheme() {
-                document.body.classList.toggle("dark-mode");
-            }
-        </script>
     </body>
 </html>
