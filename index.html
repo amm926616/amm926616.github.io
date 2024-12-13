@@ -3,11 +3,22 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Aung Myint Myat's Portfolio showcasing projects, skills, and contact information." />
-        <meta name="keywords" content="Portfolio, Aung Myint Myat, Projects, Contact, Skills" />
+        <meta
+            name="description"
+            content="Aung Myint Myat's Portfolio showcasing projects, skills, and contact information."
+        />
+        <meta
+            name="keywords"
+            content="Portfolio, Aung Myint Myat, Projects, Contact, Skills"
+        />
         <meta name="author" content="Aung Myint Myat" />
         <title>AMM's Portfolio</title>
         <link rel="stylesheet" href="./resources/styles/style.css" />
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="./resources/favicon/favicon.ico"
+        />
         <script src="./resources/scripts/script.js" defer></script>
     </head>
     <body>
@@ -24,9 +35,7 @@
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </div>
-            <button class="theme-toggle" id="theme-toggle">
-                Toggle Theme
-            </button>
+            <button class="theme-toggle" id="theme-toggle">Toggle Theme</button>
         </nav>
 
         <!-- Main Content Section -->
@@ -35,92 +44,143 @@
             <section id="home" class="container" aria-labelledby="home-heading">
                 <h2 id="home-heading">Welcome to My Portfolio</h2>
                 <p>
-                    <b>Your go-to place for exploring innovative projects and my journey as a developer.</b>
+                    <b
+                        >Your go-to place for exploring innovative projects and
+                        my journey as a developer.</b
+                    >
                 </p>
             </section>
 
             <!-- About Section -->
-            <section id="about" class="container" aria-labelledby="about-heading">
-                <img src="./resources/profiles/profile.jpg" alt="Profile Picture of Aung Myint Myat" class="profile-image" />
+            <section
+                id="about"
+                class="container"
+                aria-labelledby="about-heading"
+            >
+                <img
+                    src="./resources/profiles/profile1.jpg"
+                    alt="Profile Picture of Aung Myint Myat"
+                    class="profile-image"
+                />
                 <h2 id="about-heading">About Me - Aung Myint Myat</h2>
                 <p>
-                    I am from Myanmar, currently attending a computer science course at UoPeople...
+                    I am from Myanmar, currently attending a computer science
+                    course at UoPeople...
                 </p>
                 <h3>Skills & Technologies</h3>
                 <ul>
-                    <li>Programming Languages: Python, Java, JavaScript, Bash</li>
+                    <li>
+                        Programming Languages: Python, Java, JavaScript, Bash
+                    </li>
                     <li>GUI Development: Tkinter, PyQt6</li>
                     <li>Web Development: HTML, CSS, JavaScript</li>
-                    <li>Languages: English (Advanced), Burmese (Native), Korean (Beginner)</li>
+                    <li>
+                        Languages: English (Advanced), Burmese (Native), Korean
+                        (Beginner)
+                    </li>
                 </ul>
                 <h3>Personality & Interests</h3>
                 <p>I resonate strongly with the INTP personality...</p>
-                <a href="./resources/Aung_Myint_Myat_Resume.pdf" class="download-link">Download My Resume</a>
+                <a
+                    href="./resources/Aung_Myint_Myat_Resume.pdf"
+                    class="download-link"
+                    >Download My Resume</a
+                >
             </section>
-            
+
             <!-- Projects Section -->
             <section id="projects">
                 <h2>My Personal Projects</h2>
-
-                <article id="april-music-player" class="project">
-                    <h3>April Music Player</h3>
-                    <p>
-                        April Music Player is not just a music player; it’s a companion for both music lovers and language learners.
-                    </p>
-                    <div id="april-music-player-gallery" class="screenshot-gallery"></div> <!-- Gallery populated dynamically -->
-                </article>
-
-                <article id="chess-project" class="project">
-                    <h3>Chess in HTML, CSS, and JavaScript</h3>
-                    <p>
-                        A fun and interactive chess game made with web technologies.
-                    </p>
-                    <div id="chess-project-gallery" class="screenshot-gallery"></div> <!-- Gallery populated dynamically -->
-                </article>
-
-                <article id="aespa-Live-My-Life-Film-Photos" class="project">
-                    <h3>Chess in HTML, CSS, and JavaScript</h3>
-                    <p>
-                        Aespa live my live
-                    </p>
-                    <div id="aespa-Live-My-Life-Film-Photos-gallery" class="screenshot-gallery"></div> <!-- Gallery populated dynamically -->
-                </article>
+                <div id="projects-container"></div>
+                <script src="./resources/scripts/create_projects.js"></script>
+                <script>
+                    createProjectArticles();
+                </script>
 
                 <!-- Add more projects here, each with its own gallery -->
             </section>
 
             <!-- Contact Section -->
-            <section id="contact" class="container" aria-labelledby="contact-heading">
+            <section
+                id="contact"
+                class="container"
+                aria-labelledby="contact-heading"
+            >
                 <h2 id="contact-heading">Contact Me</h2>
-                <form action="#" method="post" class="contact-form" aria-labelledby="contact-form-heading">
-                    <h3 id="contact-form-heading">Get in touch</h3>
+                <form
+                    action="#"
+                    method="post"
+                    class="contact-form"
+                    aria-labelledby="contact-form-heading"
+                >
+                    <h3 id="contact-form-heading">Write me an email.</h3>
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required aria-describedby="name-description"/>
-                    <span id="name-description">Please enter your full name.</span>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        aria-describedby="name-description"
+                    />
+                    <span id="name-description"
+                        >Please enter your full name.</span
+                    >
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required aria-describedby="email-description"/>
-                    <span id="email-description">We'll contact you via this email.</span>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        aria-describedby="email-description"
+                    />
+                    <span id="email-description"
+                        >We'll contact you via this email.</span
+                    >
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required aria-describedby="message-description"></textarea>
-                    <span id="message-description">Write your message here.</span>
-                    <button type="submit" class="submit-button">Send Message</button>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        required
+                        aria-describedby="message-description"
+                    ></textarea>
+                    <span id="message-description"
+                        >Write your message here.</span
+                    >
+                    <button type="submit" class="submit-button">
+                        Send Message
+                    </button>
                 </form>
 
                 <div class="contact-methods">
                     <div class="contact-method">
-                        <a href="https://www.facebook.com/yourusername" target="_blank" class="contact-icon">
-                            <img src="./icons/facebook.png" alt="Facebook Messenger" />
+                        <a
+                            href="https://www.facebook.com/yourusername"
+                            target="_blank"
+                            class="contact-icon"
+                        >
+                            <img
+                                src="./icons/facebook.png"
+                                alt="Facebook Messenger"
+                            />
                         </a>
                         <p>Messenger</p>
                     </div>
                     <div class="contact-method">
-                        <a href="https://t.me/yourusername" target="_blank" class="contact-icon">
+                        <a
+                            href="https://t.me/Adamd178"
+                            target="_blank"
+                            class="contact-icon"
+                        >
                             <img src="./icons/telegram.png" alt="Telegram" />
                         </a>
                         <p>Telegram</p>
                     </div>
                     <div class="contact-method">
-                        <a href="mailto:your-email@gmail.com" class="contact-icon">
+                        <a
+                            href="mailto:your-email@gmail.com"
+                            class="contact-icon"
+                        >
                             <img src="./icons/gmail.png" alt="Gmail" />
                         </a>
                         <p>Gmail</p>

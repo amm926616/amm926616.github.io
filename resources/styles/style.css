@@ -6,8 +6,8 @@
     --accent-color: #df1839;
     --bg-color-dark: #181818;
     --text-color-dark: #ddd;
-    --font-primary: 'Roboto', Arial, sans-serif;
-    --font-heading: 'Arial', sans-serif;
+    --font-primary: "Roboto", Arial, sans-serif;
+    --font-heading: "Arial", sans-serif;
 }
 
 * {
@@ -21,7 +21,9 @@ body {
     background-color: var(--bg-color-light);
     color: var(--text-color-light);
     line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
 }
 
 a {
@@ -73,7 +75,9 @@ nav a:hover {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s, color 0.3s;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
 }
 
 .theme-toggle:hover {
@@ -91,7 +95,8 @@ main {
     margin-bottom: 30px;
 }
 
-h2, h3 {
+h2,
+h3 {
     color: var(--accent-color);
     font-family: var(--font-heading);
 }
@@ -101,7 +106,9 @@ section {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    transition: transform 0.3s, background-color 0.3s;
+    transition:
+        transform 0.3s,
+        background-color 0.3s;
 }
 
 section:hover {
@@ -135,7 +142,10 @@ h3 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    transition:
+        background-color 0.3s,
+        box-shadow 0.3s,
+        transform 0.3s;
 }
 
 body.dark-mode .project {
@@ -148,7 +158,9 @@ body.dark-mode .project {
     border-radius: 10px;
     margin: 20px 0;
     background-color: var(--card-bg-light);
-    transition: background-color 0.3s, transform 0.3s;
+    transition:
+        background-color 0.3s,
+        transform 0.3s;
 }
 
 body.dark-mode .project img {
@@ -297,7 +309,9 @@ body.dark-mode .contact-form textarea:focus {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     width: 200px;
-    transition: transform 0.3s, background-color 0.3s;
+    transition:
+        transform 0.3s,
+        background-color 0.3s;
 }
 
 .screenshot-gallery img {
@@ -392,40 +406,144 @@ body.dark-mode .contact-form button[type="submit"] {
     }
 }
 
-/* Modal for image viewer */
 .image-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.image-modal img:hover {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
+
+.image-modal .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-}
-
-/* Full-size image */
-.image-modal img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 8px;
-}
-
-/* Close button */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    color: #fff;
-    font-size: 2rem;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.7);
-    border: none;
-    padding: 5px;
     border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
 }
-.close-btn:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+
+.image-modal .close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1); /* Subtle zoom effect */
+}
+
+.image-modal .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.image-modal .nav-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    /* transform: scale(1.1); /* Subtle zoom effect */ */
+}
+
+.image-modal .left-btn {
+    left: 40px;
+}
+
+.image-modal .right-btn {
+    right: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .image-modal img {
+        max-width: 95%;
+        max-height: 70%;
+    }
+
+    .image-modal .close-btn,
+    .image-modal .nav-btn {
+        font-size: 22px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Button styling */
+.explore-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #e63946; /* Red theme for consistency */
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.explore-button:hover {
+    background-color: #d62839; /* Slightly darker red for hover */
+    transform: translateY(
+        -2px
+    ); /* Lift effect on hover */
+}
+
+.explore-button:active {
+    background-color: #c2252f; /* Even darker red for active state */
+    transform: translateY(0); /* Reset lift effect */
+}
+
+/* Center alignment styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Optional spacing above button */
 }
